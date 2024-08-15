@@ -1,6 +1,5 @@
-import React from "react";
+import PropTypes from "prop-types";
 import Modal from "../../components/Modal";
-import { TbMoodOff } from "react-icons/tb";
 
 export default function ViewTodo({ closeModal, todo }) {
   return (
@@ -25,3 +24,13 @@ function Reusable({ title, text }) {
     </div>
   );
 }
+
+ViewTodo.propTypes = {
+  closeModal: PropTypes.func,
+  todo: PropTypes.object,
+};
+
+Reusable.propTypes = {
+  title: PropTypes.string,
+  text: PropTypes.string,
+};

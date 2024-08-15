@@ -3,19 +3,6 @@
   margin: 0;
 }
 
-.modal {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: absolute;
-  width: 450px;
-  min-height: 250px;
-  padding: 2rem;
-  top: 20%;
-  background-color: white;
-  border-radius: 15px;
-}
-
 .overlay {
   position: absolute;
   top: 0;

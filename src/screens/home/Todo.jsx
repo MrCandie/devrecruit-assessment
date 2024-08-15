@@ -1,4 +1,5 @@
 import { MdEdit } from "react-icons/md";
+import PropTypes from "prop-types";
 import { FaEye } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import { useContext, useState } from "react";
@@ -47,3 +48,7 @@ export default function Todo({ todo }) {
     </>
   );
 }
+
+Todo.propTypes = {
+  todo: PropTypes.object,
+};

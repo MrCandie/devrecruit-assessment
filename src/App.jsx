@@ -9,6 +9,9 @@ import ReusableSpinner from "./components/ReusableSpinner";
 import { lazy, Suspense } from "react";
 
 const Home = lazy(() => import("./screens/home/Home"));
+const ApiIntegration = lazy(() =>
+  import("./screens/api-integration/Container")
+);
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -20,6 +23,14 @@ const router = createBrowserRouter(
           </Suspense>
         }
         path="/"
+      />
+      <Route
+        element={
+          <Suspense fallback={<ReusableSpinner height="100vh" />}>
+            <ApiIntegration />
+          </Suspense>
+        }
+        path="/api-integration"
       />
     </Route>
   )

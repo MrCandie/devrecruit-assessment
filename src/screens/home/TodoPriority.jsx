@@ -2,6 +2,7 @@ import { useContext } from "react";
 import Checkbox from "../../components/Checkbox";
 import { v4 as uuid } from "uuid";
 import { TodoContext } from "../../context";
+import PropTypes from "prop-types";
 
 export default function TodoPriority({ formData, setFormData, setShow }) {
   const { addTodo } = useContext(TodoContext);
@@ -58,3 +59,9 @@ export default function TodoPriority({ formData, setFormData, setShow }) {
     </div>
   );
 }
+
+TodoPriority.propTypes = {
+  setFormData: PropTypes.func,
+  formData: PropTypes.object,
+  setShow: PropTypes.func,
+};

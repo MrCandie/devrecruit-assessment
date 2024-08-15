@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 
 export default function TodoDescription({ setFormData, formData, setActive }) {
   return (
@@ -26,3 +26,9 @@ export default function TodoDescription({ setFormData, formData, setActive }) {
     </div>
   );
 }
+
+TodoDescription.propTypes = {
+  setFormData: PropTypes.func,
+  formData: PropTypes.object,
+  setActive: PropTypes.func,
+};

@@ -1,4 +1,5 @@
 import { useContext, useEffect, useState } from "react";
+import PropTypes from "prop-types";
 import Input from "../../components/Input";
 import Modal from "../../components/Modal";
 import Checkbox from "../../components/Checkbox";
@@ -98,3 +99,9 @@ export default function EditTodo({ closeModal, todo, setShowEditTodo }) {
     </Modal>
   );
 }
+
+EditTodo.propTypes = {
+  todo: PropTypes.object,
+  closeModal: PropTypes.func,
+  setShowEditTodo: PropTypes.func,
+};

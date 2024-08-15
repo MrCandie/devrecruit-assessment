@@ -1,5 +1,5 @@
-import Pagination from "./Pagination";
 import Todo from "./Todo";
+import PropTypes from "prop-types";
 
 export default function TodoList({ list }) {
   return (
@@ -7,7 +7,10 @@ export default function TodoList({ list }) {
       {list.map((el, i) => (
         <Todo key={i} todo={el} />
       ))}
-      <Pagination />
     </div>
   );
 }
+
+TodoList.propTypes = {
+  list: PropTypes.array,
+};

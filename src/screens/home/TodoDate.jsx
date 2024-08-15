@@ -1,4 +1,4 @@
-import React from "react";
+import PropTypes from "prop-types";
 import Input from "../../components/Input";
 
 export default function TodoDate({ setFormData, formData, setActive }) {
@@ -26,3 +26,8 @@ export default function TodoDate({ setFormData, formData, setActive }) {
     </div>
   );
 }
+TodoDate.propTypes = {
+  setFormData: PropTypes.func,
+  formData: PropTypes.object,
+  setActive: PropTypes.func,
+};

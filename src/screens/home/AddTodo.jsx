@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import PropTypes from "prop-types";
 import Modal from "../../components/Modal";
 import TodoTitle from "./TodoTitle";
 import TodoDescription from "./TodoDescription";
@@ -14,6 +15,8 @@ export default function AddTodo({ setShow }) {
     date: "",
     priority: "",
   });
+
+  // multistep form wizard for adding a new todo
 
   return (
     <Modal closeModal={() => setShow(false)}>
@@ -78,3 +81,7 @@ export default function AddTodo({ setShow }) {
     </Modal>
   );
 }
+
+AddTodo.propTypes = {
+  setShow: PropTypes.func,
+};
